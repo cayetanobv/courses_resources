@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" charset=ISO-8859-1">
+    <head>
+        <title>Ecosistemas dunares de Andalucía</title>
+        
+        <link rel="stylesheet" href="http://openlayers.org/dev/theme/default/style.css" type="text/css">
+        <style>
+            html,body {
+                height: 90%;
+                width: 99%;
+            }
+            
+            #map {
+                width: 100%;
+                height: 100%;
+                border: 1px solid black;
+            }
+            
+            /* round corners of layer switcher, and make it transparent */
+            .olControlLayerSwitcher .layersDiv {
+                border-radius: 10px 0 0 10px;
+                opacity: 0.75;
+                filter: alpha(opacity=75);
+            }
+
+        </style>
+        <script src='http://openlayers.org/api/OpenLayers.js'></script>
+        <script src="openlayers_wmsclient_dune_ecosystems.js"></script>
+    </head>
+    <body onload="init()">
+        <h1>Ecosistemas dunares de Andalucía</h1>
+        <p>Esta cartografía muestra la distribución de ecosistemas dunares en la Comunidad Autónoma de Andalucía.</p>
+        <div id='map'></div>
+    </body>
+</html>
