@@ -1,6 +1,5 @@
 #Courses resources
 
-##Info
 Resources for my courses.
 
 ##About author
