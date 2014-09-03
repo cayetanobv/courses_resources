@@ -44,7 +44,7 @@ function init() {
             var wms_plan_dunas = new OpenLayers.Layer.WMS(legend_items.legend_plan_dunas, 
                                     "http://www.juntadeandalucia.es/medioambiente/mapwms/REDIAM_plan_conservacion_dunas?",
                                     {layers:"plan_conservacion_dunas",transparent:true},
-                                    {opacity: 0.5, isBaseLayer: false, projection: "EPSG:900913", attribution:"REDIAM. Junta de Andalucía"}
+                                    {visibility: true, opacity: 0.5, isBaseLayer: false, projection: "EPSG:900913", attribution:"REDIAM. Junta de Andalucía"}
                                   );
             
             var wms_ammophila = new OpenLayers.Layer.WMS(legend_items.legend_ammophila,
@@ -55,7 +55,7 @@ function init() {
             
             var wms_dunasfijas = new OpenLayers.Layer.WMS(legend_items.legend_dunasfijas, 
                                     "http://www.juntadeandalucia.es/medioambiente/mapwms/REDIAM_hic_dunas_fijas_herbaceas?",
-                                    {layers:"REDIAM",transparent:true},
+                                    {layers:"hic_dunas_fijas_herbaceas",transparent:true},
                                     {visibility: false, opacity: 0.8, isBaseLayer: false, projection: "EPSG:900913", attribution:"REDIAM. Junta de Andalucía"}
                                   );
             
