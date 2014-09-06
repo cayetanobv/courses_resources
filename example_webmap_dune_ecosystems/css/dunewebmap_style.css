@@ -1,0 +1,17 @@
+html,body {
+    height: 90%;
+    width: 99%;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+/* round corners of layer switcher, and make it transparent */
+.olControlLayerSwitcher .layersDiv {
+    border-radius: 10px 0 0 10px;
+    opacity: 0.75;
+    filter: alpha(opacity=75);
+}
