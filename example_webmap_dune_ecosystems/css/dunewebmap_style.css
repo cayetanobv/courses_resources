@@ -1,6 +1,9 @@
 html,body {
     height: 90%;
     width: 99%;
+    background-color:#BFBFBF;
+    color: #4D4D4D;
+    font-family: Verdana, Geneva, sans-serif;
 }
 
 #map {
@@ -9,9 +12,24 @@ html,body {
     border: 1px solid black;
 }
 
-/* round corners of layer switcher, and make it transparent */
+.olControlOverviewMapElement {
+    background-color: #BFBFBF;
+    border: 1px solid #4D4D4D;
+    border-radius: 10px 0 0 10px;
+    opacity: 0.75;
+}
+
+.olControlAttribution {
+    background-color: #ADD8E6;
+    border-radius: 10px 0 0 10px;
+    opacity: 0.75;
+    bottom: 1.5em;
+}
+
 .olControlLayerSwitcher .layersDiv {
     border-radius: 10px 0 0 10px;
     opacity: 0.75;
-    filter: alpha(opacity=75);
+    background-color: #BFBFBF;
+    color: black;
+    border: 1px solid #4D4D4D;
 }

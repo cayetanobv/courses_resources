@@ -31,13 +31,14 @@ function init() {
                 maxExtent: new OpenLayers.Bounds(-20037508, -20037508,
                                                  20037508, 20037508)
                 };
+            
             map = new OpenLayers.Map('map', options);
             
             //Creating legend items
             var legend_items = {
-                                legend_plan_dunas: "REDIAM Plan de conservación de dunas <br><img src='http://www.juntadeandalucia.es/medioambiente/mapwms/REDIAM_plan_conservacion_dunas?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=plan_conservacion_dunas&amp;format=image/png&amp;STYLE=default'/>",
+                                legend_plan_dunas: "REDIAM Plan de conservación de dunas <br><img src='http://www.juntadeandalucia.es/medioambiente/mapwms/REDIAM_plan_conservacion_dunas?version=1.1.1&service=WMS&request=GetLegendGraphic&layer=plan_conservacion_dunas&format=image/png&STYLE=default'/>",
                                 legend_ammophila: "REDIAM Dunas móviles con ammophila <br><img src='http://www.juntadeandalucia.es/medioambiente/mapwms/REDIAM_hic_dunas_moviles_blancas_ammophila?version=1.1.1&service=WMS&request=GetLegendGraphic&layer=hic_dunas_moviles_ammophila&format=image/png&STYLE=default'/>",
-                                legend_dunasfijas: "REDIAM Dunas costeras fijas con vegetación herbácea <br><img src='http://www.juntadeandalucia.es/medioambiente/mapwms/REDIAM_hic_dunas_fijas_herbaceas?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=hic_dunas_fijas_herbaceas&amp;format=image/png&amp;STYLE=default'/>"
+                                legend_dunasfijas: "REDIAM Dunas costeras fijas con vegetación herbácea <br><img src='http://www.juntadeandalucia.es/medioambiente/mapwms/REDIAM_hic_dunas_fijas_herbaceas?version=1.1.1&service=WMS&request=GetLegendGraphic&layer=hic_dunas_fijas_herbaceas&format=image/png&STYLE=default'/>"
                                 };
             
             //Creating layers (open street map is the base layer)
@@ -76,7 +77,7 @@ function init() {
             
             //Set map center (Andalusia)
             var center = new OpenLayers.LonLat(-550000, 4500000);
-            map.setCenter(center, 8);
+            map.setCenter(center, 7);
             
             var overview = new OpenLayers.Control.OverviewMap();
             map.addControl(overview);
