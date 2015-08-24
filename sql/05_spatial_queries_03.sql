@@ -1,3 +1,5 @@
+-- SPATIAL QUERIES 03
+
 --Function (procedural languages)
 CREATE TABLE worlddata.rnd_pts
 (

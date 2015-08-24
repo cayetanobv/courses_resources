@@ -1,3 +1,5 @@
+-- SPATIAL QUERIES 02
+
 -- Creating a view with geometries
 CREATE OR REPLACE VIEW worlddata.caribe_ct_geom AS
   SELECT name, pop_est, geom

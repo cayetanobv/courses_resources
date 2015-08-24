@@ -1,3 +1,5 @@
+-- SPATIAL QUERIES 04
+
 --Spatial joins
 CREATE TABLE worlddata.rnd_pts_wdpa AS
   SELECT rnd.gid, rnd.geom::geometry(Point, 32629) as geom, wdpa.name, wdpa.desig_eng
