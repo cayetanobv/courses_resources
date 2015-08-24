@@ -7,8 +7,8 @@ CREATE TABLE worlddata.rnd_pts
 SELECT AddGeometryColumn('worlddata', 'rnd_pts', 'geom', 32629, 'POINT', 2);
 
 INSERT INTO worlddata.rnd_pts(geom)
-	SELECT RandomPointsInPolygon(geom, 500)::geometry(Point, 32629) AS geom
-	FROM worlddata.morocco_bdr;
+  SELECT RandomPointsInPolygon(geom, 500)::geometry(Point, 32629) AS geom
+  FROM worlddata.morocco_bdr;
 CREATE INDEX rnd_pts_gist
     ON  worlddata.rnd_pts USING GIST (geom);
 

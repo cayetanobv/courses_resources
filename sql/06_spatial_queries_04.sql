@@ -1,10 +1,10 @@
 --Spatial joins
 CREATE TABLE worlddata.rnd_pts_wdpa AS
-	SELECT rnd.gid, rnd.geom::geometry(Point, 32629) as geom, wdpa.name, wdpa.desig_eng
-	FROM worlddata.rnd_pts AS rnd
-	JOIN worlddata."WDPA_July2015_MAR_poly" AS wdpa
-	ON ST_Contains(ST_Transform(wdpa.geom,32629), rnd.geom)
-	WHERE wdpa.desig_type = 'International';
+  SELECT rnd.gid, rnd.geom::geometry(Point, 32629) as geom, wdpa.name, wdpa.desig_eng
+  FROM worlddata.rnd_pts AS rnd
+  JOIN worlddata."WDPA_July2015_MAR_poly" AS wdpa
+  ON ST_Contains(ST_Transform(wdpa.geom,32629), rnd.geom)
+  WHERE wdpa.desig_type = 'International';
 CREATE INDEX rnd_pts_wdpa_gist
     ON  worlddata.rnd_pts_wdpa USING GIST (geom);
 
