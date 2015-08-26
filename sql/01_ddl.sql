@@ -8,4 +8,4 @@ CREATE DATABASE curso2015_gisdb
        CONNECTION LIMIT = -1;
 
 CREATE SCHEMA worlddata
-    AUTORIZATION postgres;
+    AUTHORIZATION postgres;
