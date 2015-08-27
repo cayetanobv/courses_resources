@@ -7,11 +7,13 @@ CREATE TABLE worlddata.rnd_pts_wdpa AS
   JOIN worlddata."WDPA_July2015_MAR_poly" AS wdpa
   ON ST_Contains(ST_Transform(wdpa.geom,32629), rnd.geom)
   WHERE wdpa.desig_type = 'International';
+ALTER TABLE worlddata.rnd_pts_wdpa
+  ADD CONSTRAINT rnd_pts_wdpa_pkey PRIMARY KEY (gid);
 CREATE INDEX rnd_pts_wdpa_gist
     ON  worlddata.rnd_pts_wdpa USING GIST (geom);
 
 --Distance
-CREATE OR REPLACE VIEW worlddata.rnd_pts_wdpa_riv20km AS
+CREATE OR REPLACE VIEW worlddata.rnd_pts_wdpa_riv20km_v AS
 SELECT wdpa.gid, wdpa.name, wdpa.geom
 FROM worlddata.morocco_rivers AS rv, worlddata.rnd_pts_wdpa AS wdpa
 WHERE ST_DWithin(wdpa.geom, rv.geom, 20000);
