@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 #
+#  Basic example using QGIS proccesing power from Python without GUI
+#
 #  Author: Cayetano Benavent, 2015.
 #  https://github.com/GeographicaGS/CartoDB_Backup
 #
