@@ -1,5 +1,5 @@
-# SLD examples
-Several SLD (Styled Layer Descriptor) examples.
+# Spatial queries (SQL) examples
+Several spatial queries examples.
 
 ##About author
 Developed by Cayetano Benavent 2015.
