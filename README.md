@@ -8,7 +8,7 @@ Resources for my courses:
 - etc..
 
 
-##About author
+## About author
 Developed by Cayetano Benavent 2014-2015.
 
 http://www.geographica.gs
