@@ -3,7 +3,6 @@
 #  Basic example using QGIS proccesing power from Python without GUI
 #
 #  Author: Cayetano Benavent, 2015.
-#  https://github.com/GeographicaGS/CartoDB_Backup
 #
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -24,13 +23,14 @@
 from qgis.core import *
 
 
-def crsTransform(lat, lon):
+def crsTransform(lat, lon, epsg_in=4326, epsg_out=25830):
     """
     Transform CRS coordinates
     """
     try:
-        crs_src = QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.EpsgCrsId)
-        crs_dst = QgsCoordinateReferenceSystem(25830, QgsCoordinateReferenceSystem.EpsgCrsId)
+        epsgcrsid = QgsCoordinateReferenceSystem.EpsgCrsId
+        crs_src = QgsCoordinateReferenceSystem(epsg_in, epsgcrsid)
+        crs_dst = QgsCoordinateReferenceSystem(epsg_out, epsgcrsid)
         crs_transf = QgsCoordinateTransform(crs_src, crs_dst)
 
         pt1 = crs_transf.transform(QgsPoint(lon, lat))
