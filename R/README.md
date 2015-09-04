@@ -1,4 +1,4 @@
-# R scripts (QGIS) examples)
+# R scripts (QGIS) examples:
 Several R scripts for QGIS geoprocessing:
 - Raster histogram (with breaks definition).
 - Raster histogram (with breaks definition and density line).
