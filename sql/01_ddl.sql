@@ -9,10 +9,12 @@ CREATE DATABASE curso2015_gisdb
        LC_CTYPE = 'es_ES.UTF-8'
        CONNECTION LIMIT = -1;
 
+--Adding PostGIS
+CREATE EXTENSION postgis;
+
 --Schema
 CREATE SCHEMA worlddata
     AUTHORIZATION postgres;
-
 
 --Tables
 
